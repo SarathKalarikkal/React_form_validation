@@ -4,6 +4,7 @@ import { IoEyeOff } from 'react-icons/io5';
 import { IoEye } from 'react-icons/io5';
 
 function RegisterForm() {
+
   const [formState, setFormState] = useState({
     firstName: "",
     lastName: "",
@@ -52,8 +53,7 @@ function RegisterForm() {
   };
 
   const handleChange = (e) => {
-    setFormState({ ...formState, [e.target.name]: e.target.value });
-    
+    setFormState({ ...formState, [e.target.name]: e.target.value })
   };
 
   const handleSubmit = (e) => {
@@ -128,9 +128,12 @@ function RegisterForm() {
       }
     }
   };
+  
 
   return (
+    
     <>
+    <h2>Signup</h2>
       <form onSubmit={handleSubmit}>
         <div className="name-group">
           <div className="input-group">
@@ -212,9 +215,7 @@ function RegisterForm() {
           {errors.confirmPassword && <p className="errorMessage">{errors.confirmPassword}</p>}
         </div>
         <button type="submit">Signup</button>
-        <p className="info">
-          Already have an account ? <a href="/">Login</a>
-        </p>
+        
       </form>
       {successMessage && <p className="successMessage">{successMessage}</p>}
     </>

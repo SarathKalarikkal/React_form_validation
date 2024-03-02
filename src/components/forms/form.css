@@ -102,9 +102,10 @@ form  button:hover{
     color: white;
     font-size: 13px;
     font-weight: 300;
+    margin-bottom: 1rem;
 }
 .info a{
-    color:rgb(19, 110, 201) ;
+    color:rgb(19, 110, 201) ;  
 }
 
 .errorMessage{
